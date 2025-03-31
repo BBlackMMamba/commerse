@@ -1,37 +1,103 @@
-//header 
+//img section in Hero
 
-.logo{
-    font-size: 2.5rem;
+.hero_img {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+
+    &-bg {
+        position: relative;
+        height: 55.1rem;
+        width: 66.7rem;
+        z-index: 1;
+        mix-blend-mode: luminosity;
+    }
+
+    &-1{
+        position: absolute;
+        z-index:2;
+        height: 51.7rem;
+        width: 24.4rem;
+        top: 6rem;
+        left: 11.5rem;
+        transform: translateY(-50%, -50%);
+    }
+
+    &-2{
+        position: absolute;
+        z-index: 3;
+        height: 65.9rem;
+        width: 22.3rem;
+        top: 2rem;
+        transform: translateY(-50%, -50%);
+        
+        
+    }
+
+    &-3{
+        position: absolute;  
+        z-index:2;
+        height: 53.2rem;
+        width: 25.4rem;
+        top: 7rem;
+        right: 7rem;
+        transform: translateY(-50%, -50%);
+    }
+}
+
+.hero_text {
+    width: 40%;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+    outline:none;
+    border-radius: 10rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 100%;
-    color: $color-primary;
-
-    &_span{
-        color: $color-primary-yellow
-    }
+    color: $color-white;
+    background-color: $color-primary;
+    padding: 2.4rem 6.4rem;
 }
-.menu{
-    flex: 0 1 47.5rem; 
 
-    &_items{
-        display: flex;
-        flex-direction: row;  
-        justify-content: space-between; 
+
+.features_box {
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 1rem;
+
+    &-icon{
+        font-size: 4rem;
+        color: $color-green-price;
+        grid-column: 1 / 2;
+        grid-row: 1 / span 2 ;
+        transform: translateY(-.5rem);
+
+        &_wrapper{
+            grid-column: 2 / 4;
+            display: flex;
+            flex-direction: column;
+            column-gap: 1.5rem;
+
+        }
+        
     }
 
-    &_item,
-    &_item a{
-        font-family: $font;
-        text-decoration: none;
-        list-style-type: none;
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 100%;
+    &-title{
+        
+        font-size: 1.7rem;
+    }
+
+    &-text{
+        
+        font-size: 1.4rem;
         color: $color-common-font;
-        justify-content: space-between;
+        opacity: 60%;
     }
 }
-.form{
-    width: 29.2rem;
-}
-.user{}

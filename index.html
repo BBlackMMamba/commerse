@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9bb106327b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Fashion Era</title>
@@ -16,16 +19,27 @@
                 <li class="menu_item"><a href="#">Men</a></li>
                 <li class="menu_item"><a href="#">Women</a></li>
                 <li class="menu_item"><a href="#">Kids</a></li>
-                <li class="menu_item"><a href="#">Winter</a></li>
+                <li class="menu_item"><a href="#">Winter</a><span class="menu_notification">
+                    <img src="assets/icons/header_icons/header_icon_new.svg" alt="Icon">
+                </span></li>
                 <li class="menu_item"><a href="#">Lifestyle</a></li>
             </ul>
-</nav>
+        </nav>
         <form action="#" class="form form_search">
-            <label for="search">Search:</label>
-            <input type="text" id="search" name="search" placeholder="Type here...">
-            <button type="submit">Search</button>
+            <label class="form_label" for="search">Search</label>
+            <input class="form_input" type="text" id="search" name="search" placeholder="search">
+            <button class="form_button" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g opacity="0.6">
+                    <circle cx="11" cy="11" r="7" stroke="#323232" stroke-width="2"/>
+                    <path d="M11 8C10.606 8 10.2159 8.0776 9.85195 8.22836C9.48797 8.37913 9.15726 8.6001 8.87868 8.87868C8.6001 9.15726 8.37913 9.48797 8.22836 9.85195C8.0776 10.2159 8 10.606 8 11" stroke="#323232" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M20 20L17 17" stroke="#323232" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </button>
         </form>
         <div class="user">
+            <span class="user_notification">3</span>
             <svg class="user_cart" xmlns="http://www.w3.org/2000/svg" width="25" height="27" viewBox="0 0 25 27" fill="none">
                 <g opacity="0.5">
                 <path d="M3.78227 5.87339C11.0327 4.05315 20.0466 4.16475 22.1299 6.53701C24.2131 8.90926 24.1702 16.8415 21.735 19.0181C19.3012 21.1946 8.73155 21.4015 5.38303 19.0181C1.8453 16.4985 3.89797 8.74789 3.78227 4.05315C3.85169 1.42605 1 1 1 1" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -34,6 +48,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9822 24.5176C20.3919 24.5176 20.724 24.8498 20.724 25.2581C20.724 25.6678 20.3919 26 19.9822 26C19.5738 26 19.2417 25.6678 19.2417 25.2581C19.2417 24.8498 19.5738 24.5176 19.9822 24.5176Z" fill="black" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </g>
             </svg>
+            <span class="user_notification user_notification-2">8</span>
             <svg class="user_heart" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                 <g opacity="0.5">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.45022 11.6193C0.151129 7.56343 1.66936 2.92762 5.92743 1.55588C8.16725 0.833087 10.6395 1.25926 12.5016 2.66005C14.2632 1.298 16.8262 0.83793 19.0636 1.55588C23.3217 2.92762 24.8496 7.56343 23.5517 11.6193C21.5299 18.0482 12.5016 23 12.5016 23C12.5016 23 3.53991 18.1233 1.45022 11.6193Z" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,32 +68,40 @@
             <button class="btn">Shop Now</button>
         </div>
         <div class="hero_img">
-            <img src="assets/common/hero_group_bg.png" alt="Grey background">
-            <img src="assets/common/hero_buyer_1.png" alt="Girl photo">
-            <img src="assets/common/hero_buyer_middle.png" alt="Girl Photo in gray dress">
-            <img src="assets/common/hero__buyer_3.png" alt="Girl with shopping bags">
+            <img class="hero_img-bg" src="assets/common/hero_group_bg.png" alt="Grey background">
+            <img class="hero_img-1" src="assets/common/hero_buyer_1.png" alt="Girl photo">
+            <img class="hero_img-2" src="assets/common/hero_buyer_middle.png" alt="Girl Photo in gray dress">
+            <img class="hero_img-3" src="assets/common/hero__buyer_3.png" alt="Girl with shopping bags">
         </div>
     </section>
     <section class="features">
         <div class="features_box">
             <span class="features_box-icon"><i class="fa-solid fa-truck"></i></span>
-            <h5 class="features_box-title">Free Shipping</h5>
-            <span class="features_box-text">Orders Over $100</span>
+            <div class="feature_box-icon_wrapper">
+                <h5 class="features_box-title">Free Shipping</h5>
+                <span class="features_box-text">Orders Over $100</span>
+            </div>
         </div>
         <div class="features_box">
             <span class="features_box-icon"><i class="fa-solid fa-gift"></i></span>
-            <h5 class="features_box-title">Smart gift Card</h5>
-            <span class="features_box-text">Buy $1000 to get card</span>
+            <div class="feature_box-icon_wrapper">
+                <h5 class="features_box-title">Smart gift Card</h5>
+                <span class="features_box-text">Buy $1000 to get card</span>
+            </div>
         </div>
         <div class="features_box">
             <span class="features_box-icon"><i class="fa-solid fa-wallet"></i></span>
-            <h5 class="features_box-title">Quick Payment</h5>
-            <span class="features_box-text">Orders Over $100</span>
+            <div class="feature_box-icon_wrapper">
+                <h5 class="features_box-title">Quick Payment</h5>
+                <span class="features_box-text">Orders Over $100</span>
+            </div>
         </div>
         <div class="features_box">
             <span class="features_box-icon"><i class="fa-solid fa-headset"></i></span>
-            <h5 class="features_box-title">24/7 Support</h5>
-            <span class="features_box-text">Quick Support</span>
+            <div class="feature_box-icon_wrapper">
+                <h5 class="features_box-title">24/7 Support</h5>
+                <span class="features_box-text">Quick Support</span>
+            </div>
         </div>
     </section>
     <section class="collections">

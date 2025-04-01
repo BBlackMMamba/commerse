@@ -65,6 +65,8 @@
     padding: 2.4rem 6.4rem;
 }
 
+//Features Box
+
 
 .features_box {
 
@@ -100,4 +102,154 @@
         color: $color-common-font;
         opacity: 60%;
     }
+}
+
+
+//Collections Section
+
+.collection {
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    
+    
+
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+
+        width: 50%;
+        height: 100%;
+        padding: 4.4rem;
+        
+    }
+
+}
+
+.girls {
+    background: linear-gradient(to left, $color-blue-dark, $color-blue-light);
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-white;
+
+     img {
+        height: 100%;
+        width: 24rem;
+    }
+    
+}
+
+.boys{
+    background: linear-gradient(to left, $color-primary-yellow, $color-secondary-yellow);
+    grid-column: 2 / -1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-primary;
+
+     img {
+        height: 100%;
+        width: 32.4rem;
+    }
+}
+
+.kids {
+    position: relative;
+    background: linear-gradient(to left, $color-bg-gray-dark, $color-bg-gray-light);
+    
+    
+    
+
+    border: 2px solid $color-primary-light;
+    grid-column: 1 / -1;
+    grid-row: 2 / span 6;
+    
+    
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    &::after {
+        position: absolute;
+        content:'';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width:100%;
+        background-image: radial-gradient(50% 50% at center, $color-ellipse 0% 80%,#0000 81% 100%);
+        background-size: 11.3rem 11.3rem;
+        z-index: 1;
+        mix-blend-mode: luminosity;
+        opacity: 50%;
+    }
+
+    &_wrapper{
+        position:relative;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: center;
+
+        height: 49.3rem;
+        width: 50%;
+        padding: 4.4rem;
+        z-index: 4;
+
+
+        &_text {
+            background-color: $color-primary-yellow;
+            width: 42.4rem;
+            height: 18.7rem;
+            clip-path: polygon(0 0, 92% 13%, 100% 78%, 0% 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+
+    &_bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 52.7rem;
+        width: 63.7rem;
+        z-index: 3;
+        opacity: 40%;
+        filter: brightness(70%);
+    }
+
+    &_baby{
+        position: absolute;
+        top: -.5rem;
+        right: 8rem;
+        height: 51.3rem;
+        width: 44.5rem;
+        z-index: 4;
+    }
+
+
+
+}
+
+.cta {
+    border: none;
+    outline:none;
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 100%;
+    color: $color-common-font;
+    background-color: $color-white;
+    padding: 1.5rem 4.4rem;
 }

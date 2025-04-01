@@ -33,6 +33,45 @@ h1 {
   letter-spacing: 10.5%;
 }
 
+.collection_title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.collection_text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 100%;
+  color: #fff;
+}
+
+.girls_span {
+  color: #FBD103;
+}
+
+.boys_span {
+  color: #004743;
+}
+
+.kids_wrapper p {
+  font-size: 8rem;
+  color: #000000;
+  line-height: 100%;
+}
+.kids_wrapper span {
+  font-size: 2.5rem;
+  color: #004743;
+  line-height: 100%;
+}
+
+.kids_title {
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000000;
+}
+
 .hero_img {
   position: relative;
   width: 40%;
@@ -119,6 +158,121 @@ h1 {
   opacity: 60%;
 }
 
+.collection {
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+.collection_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  padding: 4.4rem;
+}
+
+.girls {
+  background: linear-gradient(to left, #58C4E4, #6CDDFF);
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+}
+.girls img {
+  height: 100%;
+  width: 24rem;
+}
+
+.boys {
+  background: linear-gradient(to left, #FBD103, #FFE14B);
+  grid-column: 2/-1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #004743;
+}
+.boys img {
+  height: 100%;
+  width: 32.4rem;
+}
+
+.kids {
+  position: relative;
+  background: linear-gradient(to left, #EDEEF2, #ECF0F3);
+  border: 2px solid #78C750;
+  grid-column: 1/-1;
+  grid-row: 2/span 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kids::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(50% 50% at center, #EBDAE2 0% 80%, rgba(0, 0, 0, 0) 81% 100%);
+  background-size: 11.3rem 11.3rem;
+  z-index: 1;
+  mix-blend-mode: luminosity;
+  opacity: 50%;
+}
+.kids_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 49.3rem;
+  width: 50%;
+  padding: 4.4rem;
+  z-index: 4;
+}
+.kids_wrapper_text {
+  background-color: #FBD103;
+  width: 42.4rem;
+  height: 18.7rem;
+  clip-path: polygon(0 0, 92% 13%, 100% 78%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kids_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 52.7rem;
+  width: 63.7rem;
+  z-index: 3;
+  opacity: 40%;
+  filter: brightness(70%);
+}
+.kids_baby {
+  position: absolute;
+  top: -0.5rem;
+  right: 8rem;
+  height: 51.3rem;
+  width: 44.5rem;
+  z-index: 4;
+}
+
+.cta {
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #323232;
+  background-color: #fff;
+  padding: 1.5rem 4.4rem;
+}
+
 .container {
   background-color: fuchsia;
   display: grid;
@@ -158,8 +312,14 @@ h1 {
 }
 
 .collections {
-  background-color: yellow;
   grid-column: 2/-2;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 2.4rem;
+  row-gap: 2.6rem;
+  margin-bottom: 10rem;
 }
 
 .new-arrivals {

@@ -40,8 +40,20 @@
     margin-bottom: 10rem;
 }
 .collections{
-    background-color: yellow;
+    
     grid-column: 2 / -2;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 2.4rem;
+    row-gap: 2.6rem;
+    margin-bottom: 10rem;
+
+    
+
+
 }
 .new-arrivals{
     background-color: aqua;

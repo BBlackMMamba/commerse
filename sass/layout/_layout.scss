@@ -10,6 +10,7 @@
 }
 
 .header{
+
     background-color: $color-gray-light;
     grid-column: 2 / -2;
 
@@ -55,18 +56,32 @@
 
 
 }
-.new-arrivals{
-    background-color: aqua;
+.new-arrivals,
+.trending-collections{
+    
     grid-column: 2 / -2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+    margin-bottom: 10rem;
 }
 .brands{
-    background-color: pink;
-    grid-column: 2 / -2;
+    background-color: $color-primary;
+    grid-column: 3 / -3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
+    border-radius: 3rem;
+    margin-bottom: 10rem;
 }
-.trending-collections{
-    background-color: purple;
-    grid-column: 2 / -2;
-}
+
 .reviews{
     background-color: crimson;
     grid-column: 1 / -1;

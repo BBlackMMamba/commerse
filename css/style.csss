@@ -368,7 +368,10 @@ h1 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2.4rem;
+  gap: 2.4rem;
+  width: 100%;
+  justify-self: center;
+  align-items: center;
 }
 
 .card {
@@ -378,6 +381,7 @@ h1 {
   align-items: start;
   row-gap: 1.3rem;
   margin-bottom: 6rem;
+  justify-self: center;
 }
 .card_img_wrapper {
   position: relative;

@@ -139,6 +139,43 @@ h1 {
   font-weight: 500;
 }
 
+.reviews_text {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 139%;
+  letter-spacing: 5%;
+  margin-bottom: 2.2rem;
+}
+
+.author {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 139%;
+}
+
+.footer_title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.logo_footer {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #004743;
+}
+.logo_footer_era {
+  color: #FBD103;
+}
+
+.footer_text {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 139%;
+  letter-spacing: 5%;
+}
+
 .hero_img {
   position: relative;
   width: 40%;
@@ -368,7 +405,10 @@ h1 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2.4rem;
+  gap: 2.4rem;
+  width: 100%;
+  justify-self: center;
+  align-items: center;
 }
 
 .card {
@@ -378,6 +418,7 @@ h1 {
   align-items: start;
   row-gap: 1.3rem;
   margin-bottom: 6rem;
+  justify-self: center;
 }
 .card_img_wrapper {
   position: relative;
@@ -434,6 +475,7 @@ h1 {
   border: 2px solid #323232;
   border-radius: 100%;
   padding: 2rem 1.5rem;
+  cursor: pointer;
 }
 .arrow-wrapper .left-arrow {
   transform: rotate(-180deg);
@@ -448,6 +490,144 @@ h1 {
 .brands_wrapper img {
   width: 16.6rem;
   height: 8rem;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 7rem;
+}
+
+.review_card_wrapper {
+  filter: drop-shadow(1px 1px 11px rgba(0, 0, 0, 0.09));
+}
+
+.reviews_card {
+  width: 112rem;
+  height: 31rem;
+  background-color: #FEFEFE;
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 11px 9px rgba(0, 0, 0, 0.09);
+  clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1.9rem;
+  margin: 6.6rem;
+}
+.reviews_card img {
+  height: 28.6rem;
+  width: 33.5rem;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+.reviews_card_wrapper {
+  width: 57rem;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+}
+.reviews_card_arrows {
+  justify-self: end;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-bottom: 10rem;
+}
+.form_container img {
+  height: 14.1rem;
+  width: 14.1rem;
+}
+.form_container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+.form_container .subscribe-form {
+  position: relative;
+  width: 77.1rem;
+  height: 13rem;
+}
+.form_container .subscribe-form input {
+  width: 100%;
+  height: 13rem;
+  outline: none;
+  border: none;
+  background-color: #F7F7F7;
+  border-radius: 100rem;
+  padding: 4.8rem;
+}
+.form_container .subscribe-form input::placeholder {
+  font-size: 2.5rem;
+  font-weight: 400;
+  opacity: 50%;
+}
+.form_container .subscribe-form button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #FBD103;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 2.6rem;
+}
+.form_container_icon_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+}
+.form_container_icon_wrapper span {
+  background-color: #F3F3F3;
+  height: 5.1rem;
+  width: 5.1rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list_container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 13rem;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+  gap: 2.2rem;
+  padding-top: 3rem;
+}
+
+.footer_list ul {
+  list-style: none;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 217%;
+}
+.footer_list ul li a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .container {
@@ -473,6 +653,7 @@ h1 {
   background-color: #F9F9F9;
   grid-column: 1/-1;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 10rem;
@@ -523,13 +704,22 @@ h1 {
 }
 
 .reviews {
-  background-color: crimson;
+  background-color: #F9F9F9;
   grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
 }
 
 .footer {
-  background-color: burlywood;
+  background-color: #fff;
   grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {

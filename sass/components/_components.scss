@@ -283,7 +283,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2.4rem;
+    gap: 2.4rem;
+
+    width: 100%;
+    justify-self: center;
+    align-items: center;
 }
 
 .card {
@@ -293,6 +297,7 @@
     align-items: start;
     row-gap: 1.3rem;
     margin-bottom: 6rem;
+    justify-self: center;
 
     &_img_wrapper{
         position: relative;
@@ -346,10 +351,6 @@
         }
     }
 
-    &_tag{}
-
-    &_title{}
-
      &_price_wrapper{
         display: flex;       
         align-items: center;
@@ -372,6 +373,7 @@
         border: 2px solid $color-common-font;
         border-radius: 100%;
         padding: 2rem 1.5rem;
+        cursor: pointer;
     }
 
     .left-arrow {
@@ -382,15 +384,6 @@
 }
 
 
-.brands {
-
-    &_title{
-
-    }
-
-    &_text{}
-}
-
 .brands_wrapper {
     display: flex;
     flex-direction: row;
@@ -400,5 +393,182 @@
     & img {
         width: 16.6rem;
         height: 8rem;
+    }
+}
+
+//REVIEWS SECTION
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+
+    margin-top: 7rem;
+}
+
+.review_card_wrapper{
+    filter: drop-shadow(1px 1px 11px rgba(0, 0, 0, 0.09));
+}
+
+.reviews_card {
+    width: 112rem;
+    height: 31rem;
+    background-color: $color-gray-review;
+    
+    border-radius: .3rem;
+    box-shadow: 1px 1px 11px 9px rgba(0, 0, 0, 0.09); 
+    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    
+    display:grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    padding: 1.9rem;
+    margin: 6.6rem;
+
+    & img {
+        height: 28.6rem;
+        width: 33.5rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+    }
+
+
+    &_wrapper{
+        width: 57rem;
+        grid-column: 2 / -1;
+        grid-row: 1 / -1;
+
+    }
+
+    &_arrows{
+        
+        justify-self: end;
+    }
+}
+
+//Footer 
+
+.form_container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+
+    margin-bottom: 10rem;
+
+    img {
+        height: 14.1rem;
+        width: 14.1rem;
+    }
+
+    &_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.4rem;
+    }
+
+        .subscribe-form{
+            position: relative;
+            width: 77.1rem;
+            height: 13rem;
+
+            input {
+                width:100%;
+                height: 13rem;
+                outline: none;
+                border:none;
+                background-color: $color-gray;
+                border-radius: 100rem;
+                padding: 4.8rem;
+
+                &::placeholder{
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    opacity: 50%;
+                }
+            }
+            button{
+                
+                position: absolute;
+                top: 1rem;
+                right:1rem;
+                background-color: $color-primary-yellow;
+                outline: none;
+                border:none;
+                border-radius: 100%;
+                cursor: pointer;
+                padding: 2.6rem;
+            }
+        }
+    
+
+    &_icon_wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3.5rem;
+
+        span {
+            background-color:$color-grey-footer-icons;
+            height: 5.1rem;
+            width: 5.1rem;
+            border-radius: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+
+.list_container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 13rem;
+
+    align-items: start;
+    justify-content: center;
+
+    margin-bottom: 10rem;
+
+}
+
+.logo_container{
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    gap: 2.2rem;
+
+    padding-top: 3rem;
+}
+
+.footer_list{
+
+    ul {
+        list-style: none;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 217%;
+
+        li a { 
+            text-decoration: none;
+            color: $color-black;
+        }
     }
 }

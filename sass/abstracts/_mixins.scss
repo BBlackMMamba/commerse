@@ -1,0 +1,25 @@
+//FLEX COLUMN
+
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//FLEX SPACE
+
+@mixin flex-space($space){
+    display: flex;
+    flex-direction: row;
+    justify-content: $space;
+    align-items: center;
+}
+
+//FONT SIZE, WEIGHT, LINE HEIGHT
+
+@mixin font($size, $weight, $l-h){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $l-h;
+}
